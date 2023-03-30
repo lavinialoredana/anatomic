@@ -1,4 +1,4 @@
-import logoAnatomic from "./images/logoAnatomic.jpeg";
+import logoAnatomic from "../../images/logoAnatomic.jpeg";
 import "./App.css";
 
 function App() {
