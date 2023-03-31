@@ -1,15 +1,19 @@
 import ResultCard from "../ResultCard";
-import { mockedResults } from "../../utils/mockedResults";
 
-const Results = () => {
-    return mockedResults.map((result, index) => {
+
+const Results = ({resultsData, onClick}) => {
+        
+    return resultsData.map((result, index) => {
+
         return (
             <ResultCard
-                id={index}
+                key={index}
+                id={result.id}
                 album={result.album}
                 artist={result.artist}
                 imgSrc={result.image}
                 altImage={result.album}
+                onClick={onClick}
                 addToAlbums="Add To Albums"
             />
         );
