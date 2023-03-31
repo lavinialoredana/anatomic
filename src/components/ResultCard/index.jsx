@@ -1,85 +1,19 @@
 import "./ResultCard.css";
 
-const ResultCard = () => {
+const ResultCard = ({album, artist, imgSrc, altImage, addToAlbums }) => {
     return (
         <div className="Card-container">
-            <article>
+                <article>
                 <header>
-                    <h5> Album</h5>
-                    <p> Artist Name</p>
+                    <h5> {album}</h5>
+                    <p> {artist}</p>
                 </header>
                 <img
-                    src="https://static.tvtropes.org/pmwiki/pub/images/350x350px-7748e070_axisboldaslove_950.jpeg"
-                    alt=""
+                    src= {imgSrc}
+                    alt={altImage}
                 />
                 <footer>
-                    <button> Add to Albums </button>
-                </footer>
-            </article>
-            <article>
-                <header>
-                    <h5> Album</h5>
-                    <p> Artist Name</p>
-                </header>
-                <img
-                    src="https://static.tvtropes.org/pmwiki/pub/images/350x350px-7748e070_axisboldaslove_950.jpeg"
-                    alt=""
-                />
-                <footer>
-                    <button> Add to Albums </button>
-                </footer>
-            </article>
-
-            <article>
-                <header>
-                    <h5> Album</h5>
-                    <p> Artist Name</p>
-                </header>
-                <img
-                    src="https://static.tvtropes.org/pmwiki/pub/images/350x350px-7748e070_axisboldaslove_950.jpeg"
-                    alt=""
-                />
-                <footer>
-                    <button> Add to Albums </button>
-                </footer>
-            </article>
-            <article>
-                <header>
-                    <h5> Album</h5>
-                    <p> Artist Albums</p>
-                </header>
-                <img
-                    src="https://static.tvtropes.org/pmwiki/pub/images/350x350px-7748e070_axisboldaslove_950.jpeg"
-                    alt=""
-                />
-                <footer>
-                    <button> Add to Albums </button>
-                </footer>
-            </article>
-            <article>
-                <header>
-                    <h5> Album</h5>
-                    <p> Artist Name</p>
-                </header>
-                <img
-                    src="https://static.tvtropes.org/pmwiki/pub/images/350x350px-7748e070_axisboldaslove_950.jpeg"
-                    alt=""
-                />
-                <footer>
-                    <button> Add to Albums </button>
-                </footer>
-            </article>
-            <article>
-                <header>
-                    <h5> Album</h5>
-                    <p> Artist Name</p>
-                </header>
-                <img
-                    src="https://static.tvtropes.org/pmwiki/pub/images/350x350px-7748e070_axisboldaslove_950.jpeg"
-                    alt=""
-                />
-                <footer>
-                    <button> Add to Albums </button>
+                    <button> {addToAlbums} </button>
                 </footer>
             </article>
         </div>

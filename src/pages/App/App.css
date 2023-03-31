@@ -16,5 +16,19 @@
   color: white;
 }
 
+.Results-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.Results-container > article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 20%;
+  margin: 2rem;
+}
 
 

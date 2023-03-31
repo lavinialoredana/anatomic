@@ -1,7 +1,6 @@
 import HeaderBar from "../../components/HeaderBar";
 import "./App.css";
-import ResultCard from "../../components/ResultCard";
-
+import Results from "../../components/Results";
 function App() {
     return (
         <div className="App">
@@ -10,7 +9,9 @@ function App() {
             </header>
 
             <main>
-                <ResultCard />
+            < div className = "Results-container">
+                <Results />
+                </div>
             </main>
         </div>
     );
