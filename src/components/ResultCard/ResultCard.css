@@ -1,0 +1,21 @@
+.Card-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      
+      .Card-container > article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        max-width: 20%;
+      
+        margin: 2rem;
+      }
+      
+      .Card-container > img {
+        width: 200px;
+        height: 200px;
+      }
+      
