@@ -1,20 +1,40 @@
 .App {
   text-align: center;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   padding: 1rem;
 }
 
 .App-header {
-  box-sizing: border-box;
-  background-color: #282c34;
+  margin: 0 auto;
   height: 20vh;
-  width: 90%;
+  width: 100%;
   display: flex;
   align-items: center;
+  background-color: #282c34;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
+.Card-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.Card-container > article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 20%;
+
+  margin: 2rem;
+}
+
+.Card-container > img {
+  width: 200px;
+  height: 200px;
+}
 
 

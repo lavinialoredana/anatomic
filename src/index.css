@@ -1,6 +1,6 @@
 
 #root, body, .App{
-  height: 100vh;
+  height: auto;
 }
 
 body {
