@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import AllAlbumsProvider from "../context/AllAlbumsProvider";
 import App from "../pages/App/App";
 import Albums from "../pages/Albums";
 import ErrorPage from "../pages/Error";
@@ -6,13 +7,21 @@ import ErrorPage from "../pages/Error";
 export const routesConfig = [
     {
         path: "/",
-        element: <App />,
+        element: (
+            <AllAlbumsProvider>
+                <App />
+            </AllAlbumsProvider>
+        ),
         errorElement: <ErrorPage />,
     },
 
     {
         path: "/all-albums",
-        element: <Albums />,
+        element: (
+            <AllAlbumsProvider>
+                <Albums />
+            </AllAlbumsProvider>
+        ),
         errorElement: <ErrorPage />,
     },
 ];
