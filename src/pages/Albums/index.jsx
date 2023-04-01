@@ -1,7 +1,9 @@
+import HeaderBar from "../../components/HeaderBar";
+
 const Albums = () => {
     return (
         <div>
-            <h1> All </h1>
+            <HeaderBar home={"All Albums"} src={"/"} allAlbums={"Home"} />
         </div>
     );
 };

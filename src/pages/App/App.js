@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState} from "react";
 import HeaderBar from "../../components/HeaderBar";
 import "./App.css";
 import Results from "../../components/Results";
 import { mockedResults } from "../../utils/mockedResults";
 
 function App() {
+
     const [allAlbums, setAlbums] = useState("");
 
     const updateAlbums = (id) => {
@@ -16,7 +17,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <HeaderBar home={"Home"} allAlbums = {"All Albums"} />
+                <HeaderBar home={"Home"} src = {"/all-albums"} allAlbums = {"All Albums"} showSearchBar = {true}/>
             </header>
 
             <main>

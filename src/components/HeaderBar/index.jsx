@@ -1,7 +1,7 @@
 import "./HeaderBar.css";
 import SearchBar from "../SearchBar";
 
-const HeaderBar = ({home,allAlbums}) => {
+const HeaderBar = ({ home, src, allAlbums, showSearchBar}) => {
     return (
         <div className="Top-navigation-container">
             <nav className="Top-navigation">
@@ -12,12 +12,11 @@ const HeaderBar = ({home,allAlbums}) => {
                 </ul>
                 <ul>
                     <li>
-                        <a href="/all-albums">{allAlbums}</a>
+                        <a href={src}>{allAlbums}</a>
                     </li>
                 </ul>
             </nav>
-
-          <SearchBar/>
+            {showSearchBar ? <SearchBar /> : null }
         </div>
     );
 };
