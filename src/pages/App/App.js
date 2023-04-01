@@ -16,7 +16,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <HeaderBar />
+                <HeaderBar home={"Home"} allAlbums = {"All Albums"} />
             </header>
 
             <main>
