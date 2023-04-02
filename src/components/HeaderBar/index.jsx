@@ -12,8 +12,6 @@ const HeaderBar = ({ homeSrc, home, albumsSrc, allAlbums, showSearchBar }) => {
                             <strong>{home}</strong>
                         </Link>
                     </li>
-                </ul>
-                <ul>
                     <li>
                         <Link to={albumsSrc}>{allAlbums}</Link>
                     </li>
