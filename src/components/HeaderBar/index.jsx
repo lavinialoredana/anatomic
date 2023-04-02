@@ -3,7 +3,7 @@ import SearchBar from "../SearchBar";
 import { Link, useLocation } from "react-router-dom";
 import { homeSrc, albumsSrc } from "../../routes/AppRouter";
 
-const HeaderBar = ({ showSearchBar }) => {
+const HeaderBar = ({ showSearchBar, onContentChange }) => {
     const location = useLocation().pathname;
 
     return (
@@ -36,7 +36,7 @@ const HeaderBar = ({ showSearchBar }) => {
                     </li>
                 </ul>
             </nav>
-            {showSearchBar ? <SearchBar /> : null}
+            {showSearchBar ? <SearchBar onContentChange = {onContentChange}/> : null}
         </div>
     );
 };
