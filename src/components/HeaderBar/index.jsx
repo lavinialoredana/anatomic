@@ -1,19 +1,38 @@
 import "./HeaderBar.css";
 import SearchBar from "../SearchBar";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { homeSrc, albumsSrc } from "../../routes/AppRouter";
 
-const HeaderBar = ({ homeSrc, home, albumsSrc, allAlbums, showSearchBar }) => {
+const HeaderBar = ({ showSearchBar }) => {
+    const location = useLocation().pathname;
+
     return (
         <div className="Top-navigation-container">
             <nav className="Top-navigation">
                 <ul>
                     <li>
-                        <Link to={homeSrc}>
-                            <strong>{home}</strong>
+                        <Link
+                            to={homeSrc}
+                            className={
+                                location === homeSrc
+                                    ? "Top-navigation-highlight-link contrast"
+                                    : null
+                            }
+                        >
+                            Home
                         </Link>
                     </li>
                     <li>
-                        <Link to={albumsSrc}>{allAlbums}</Link>
+                        <Link
+                            to={albumsSrc}
+                            className={
+                                location === albumsSrc
+                                    ? "Top-navigation-highlight-link contrast"
+                                    : null
+                            }
+                        >
+                            All Albums
+                        </Link>
                     </li>
                 </ul>
             </nav>

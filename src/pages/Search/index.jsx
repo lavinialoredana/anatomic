@@ -7,13 +7,7 @@ function Search() {
     return (
         <div className="Search">
             <header className="Search-header">
-                <HeaderBar
-                    homeSrc={"/"}
-                    home={"Home"}
-                    albumsSrc={"/all-albums"}
-                    allAlbums={"All Albums"}
-                    showSearchBar={true}
-                />
+                <HeaderBar showSearchBar={true} />
             </header>
 
             <main>

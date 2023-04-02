@@ -8,12 +8,7 @@ const Albums = () => {
 
     return (
         <div>
-            <HeaderBar
-                homeSrc={"/"}
-                home={"Home"}
-                albumsSrc={"/all-albums"}
-                allAlbums={"All Albums"}
-            />
+            <HeaderBar showSearchBar={false} />
             <Results resultsData={allAlbums} />
         </div>
     );
