@@ -1,22 +1,25 @@
 import "./HeaderBar.css";
 import SearchBar from "../SearchBar";
+import { Link } from "react-router-dom";
 
-const HeaderBar = ({ home, src, allAlbums, showSearchBar}) => {
+const HeaderBar = ({ homeSrc, home, albumsSrc, allAlbums, showSearchBar }) => {
     return (
         <div className="Top-navigation-container">
             <nav className="Top-navigation">
                 <ul>
                     <li>
-                        <strong>{home}</strong>
+                        <Link to={homeSrc}>
+                            <strong>{home}</strong>
+                        </Link>
                     </li>
                 </ul>
                 <ul>
                     <li>
-                        <a href={src}>{allAlbums}</a>
+                        <Link to={albumsSrc}>{allAlbums}</Link>
                     </li>
                 </ul>
             </nav>
-            {showSearchBar ? <SearchBar /> : null }
+            {showSearchBar ? <SearchBar /> : null}
         </div>
     );
 };
