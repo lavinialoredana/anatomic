@@ -3,7 +3,7 @@ import "./Search.css";
 import Results from "../../components/Results";
 import { mockedResults } from "../../utils/mockedResults";
 
-function Search() {
+ const Search = () => {
     return (
         <div className="Search">
             <header className="Search-header">
