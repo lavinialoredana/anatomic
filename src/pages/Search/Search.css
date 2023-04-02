@@ -1,11 +1,11 @@
-.App {
+.Search {
   text-align: center;
   display: flex;
   flex-direction: column;
   padding: 1rem;
 }
 
-.App-header {
+.Search-header {
   margin: 0 auto;
   height: 20vh;
   width: 100%;
