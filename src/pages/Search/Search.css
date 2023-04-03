@@ -16,13 +16,14 @@
   color: white;
 }
 
-.Results-container{
+.Results-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-bottom: 2rem;
 }
 
-.Results-container > article {
+.Results-container>article {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,5 +31,3 @@
   max-width: 20%;
   margin: 2rem;
 }
-
-
