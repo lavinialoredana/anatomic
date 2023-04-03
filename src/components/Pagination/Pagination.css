@@ -1,0 +1,17 @@
+.Pagination-container {
+        margin: auto;
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.Pagination {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 40%;
+}
+
+.Pagination>li {
+        list-style-type: none;
+}
