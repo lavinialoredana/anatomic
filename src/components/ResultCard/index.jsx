@@ -2,17 +2,18 @@ import { useContext } from "react";
 import { AllAlbumsContext } from "../../context/AllAlbumsProvider";
 import "./ResultCard.css";
 
-const ResultCard = ({ result }) => {
+const ResultCard = ({ result, onModalShow }) => {
     const { addAlbum, removeAlbum, isAlbumSaved } = useContext(AllAlbumsContext);
 
     const cachedIsAlbumSaved = isAlbumSaved(result.id);
 
-    const handleClick = () => {
+    const handleAddRemoveAlbum = (e) => {
+        e.stopPropagation();
         cachedIsAlbumSaved ? removeAlbum(result) : addAlbum(result);
     };
 
     return (
-        <div className="Card-container" id={result.id}>
+        <div onClick={onModalShow} className="Card-container" id={result.id}>
             <article>
                 <header>
                     <h5> {result.album}</h5>
@@ -21,7 +22,7 @@ const ResultCard = ({ result }) => {
                 <img src={result.cover} alt={result.album} />
                 <footer>
                     <button
-                        onClick={handleClick}
+                        onClick={handleAddRemoveAlbum}
                         className={cachedIsAlbumSaved ? "contrast" : ""}
                     >
                         {cachedIsAlbumSaved ? "Remove Album" : "Add To Albums"}
