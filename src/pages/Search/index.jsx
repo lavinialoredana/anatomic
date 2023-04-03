@@ -9,8 +9,9 @@ const Search = () => {
     const [searchResults, setSearchResults] = useState([]);
     const [totalResults, setTotalResults] = useState(0);
     const [currentPage, setCurrentPage] = useState(1);
+    const [isLoading, setIsLoading] = useState(false);
 
-    const resultsPerPage = 5;
+    const resultsPerPage = 4;
 
     const token = "AtHIrqqzwzCDJWPlBSWeYmEVCyTYiGWQSLRnplqH";
 
@@ -41,6 +42,7 @@ const Search = () => {
         }
 
         setSearchResults([]);
+        setIsLoading(true);
 
         try {
             const response = await fetch(
@@ -66,8 +68,11 @@ const Search = () => {
                     album: splitTitle[1],
                     artist: splitTitle[0],
                     cover: result.thumb,
-                    masterId: result.master_id,
                     id: result.id,
+                    masterId: result.master_id,
+                    country: result.country,
+                    genre: result.genre,
+                    year: result.year,
                 };
             });
             setSearchResults(resultsArray);
@@ -79,6 +84,7 @@ const Search = () => {
             console.log("Error");
             throw new Error(error);
         } finally {
+            setIsLoading(false);
         }
     }, [userInput, resultsPerPage, currentPage]);
 
@@ -92,20 +98,20 @@ const Search = () => {
                 <HeaderBar showSearchBar={true} onContentChange={handleContentChange} />
             </header>
 
-            {searchResults ? (
+            {isLoading ? (
+                <div className="Loading">Loading...</div>
+            ) : (
                 <main className="Main-container">
-                    <div className="Results-container">
+                    <div className="Results-container grid">
                         <Results resultsData={searchResults} />
                     </div>
                     <Pagination
                         onPreviousPage={handlePreviousPage}
-                        currentPage = {currentPage}
+                        currentPage={currentPage}
                         onPaginate={handlePaginate}
                         onNextPage={handleNextPage}
                     />
                 </main>
-            ) : (
-                <div className="Loading">Loading...</div>
             )}
         </div>
     );
