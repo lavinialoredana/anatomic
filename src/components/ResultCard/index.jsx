@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { AllAlbumsContext } from "../../context/AllAlbumsProvider";
 import "./ResultCard.css";
+import { AllAlbumsContext } from "../../context/AllAlbumsProvider";
 
 const ResultCard = ({ result, onModalShow }) => {
     const { addAlbum, removeAlbum, isAlbumSaved } = useContext(AllAlbumsContext);

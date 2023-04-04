@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ModalCard from "../ModalCard";
 import ResultCard from "../ResultCard";
+import ModalCard from "../ModalCard";
 
 const Results = ({ resultsData }) => {
     const [modalOpen, setModalOpen] = useState(false);

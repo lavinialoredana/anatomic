@@ -36,7 +36,7 @@ const HeaderBar = ({ showSearchBar, onContentChange }) => {
                     </li>
                 </ul>
             </nav>
-            {showSearchBar ? <SearchBar onContentChange = {onContentChange}/> : null}
+            {showSearchBar ? <SearchBar onContentChange={onContentChange} /> : null}
         </div>
     );
 };
