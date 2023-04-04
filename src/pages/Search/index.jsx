@@ -100,7 +100,7 @@ const Search = () => {
 
             {isLoading ? (
                 <div className="Loading">Loading...</div>
-            ) : (
+            ) : searchResults.length > 0 ? (
                 <main className="Main-container">
                     <div className="Results-container grid">
                         <Results resultsData={searchResults} />
@@ -112,7 +112,7 @@ const Search = () => {
                         onNextPage={handleNextPage}
                     />
                 </main>
-            )}
+            ) : null}
         </div>
     );
 };
