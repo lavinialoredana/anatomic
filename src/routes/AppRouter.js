@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Search from "../pages/Search";
-import Albums from "../pages/Albums";
 import ErrorPage from "../pages/Error";
+import Albums from "../pages/Albums";
 
 export const homeSrc = "/";
 export const albumsSrc = "/all-albums";
