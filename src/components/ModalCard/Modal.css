@@ -1,0 +1,20 @@
+.Modal-card-container {
+        display: inline-block;
+        width: 300px;
+        height: 700px;
+        margin-bottom: 3rem;
+}
+
+.Modal-card-container>article>header * {
+        width: 0px;
+        height: 0px;
+        min-width: 100%;
+        min-height: 100%;
+        margin-bottom: 6rem;
+}
+
+.Modal-card-container>dialog>article>img {
+        width: 150px;
+        height: 200px;
+        margin-bottom: 2rem;
+}

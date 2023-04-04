@@ -1,3 +1,5 @@
+import "./Modal.css";
+
 const ModalCard = ({ isModalOpen, modalResult, onModalClose }) => {
     if (isModalOpen === false) {
         return null;
